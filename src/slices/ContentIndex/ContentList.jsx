@@ -5,6 +5,7 @@ import { asImageSrc, isFilled } from "@prismicio/client";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MdArrowOutward } from "react-icons/md";
+import "./ContentList.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
