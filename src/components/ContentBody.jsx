@@ -26,7 +26,7 @@ export default function ContentBody({ page }) {
 		<Bounded os="article">
 			<div className="rounded-2xl border-2 border-slate-800 bg-slate-900 px-4 py-10 md:px-8 md:py-20">
 				<Heading os="h1">{page.data.title}</Heading>
-				<div className="flex gap-4 text-yellow-400 text-xl font-bold">
+				<div className="flex gap-4 text-green-400 text-xl font-bold">
 					{page.tags.map((tag) => {
 						return <span key={tag}>{tag}</span>;
 					})}

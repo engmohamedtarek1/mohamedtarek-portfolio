@@ -20,7 +20,7 @@ export async function generateMetadata() {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="bg-slate-900 text-slate-100">
+    <html lang="en" className="bg-emerald-950 text-slate-100">
       <body className={clsx(urbanist.className, "relative min-h-screen")}>
         <Header />
         {children}

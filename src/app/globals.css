@@ -3,10 +3,27 @@
 @tailwind utilities;
 
 .background-gradient {
-	background: radial-gradient(
-		circle at top center,
-		hsla(222, 80%, 60%, 0.5) 0%,
-		hsla(222, 0%, 0%, 0) 50%,
-		hsla(222, 0%, 0%, 0) 100%
-	);
+  background: radial-gradient(
+    circle at top center,
+    #018346 0%,
+    hsla(222, 0%, 0%, 0) 50%,
+    hsla(222, 0%, 0%, 0) 100%
+  );
+}
+
+body {
+	cursor: none; /* Hide the default cursor */
+}
+
+.custom-cursor {
+	position: fixed;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: transparent;
+	border: 2px solid #00ff00;
+	mix-blend-mode: screen; /* Glowing effect */
+	pointer-events: none; /* Allow interaction with underlying elements */
+	transform: translate(-50%, -50%);
+	transition: width 0.2s ease, height 0.2s ease;
 }
