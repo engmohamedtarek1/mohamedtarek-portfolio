@@ -12,3 +12,13 @@ export const NAVBAR = [
     },
   },
 ];
+
+export const HERO = [
+  {
+    full_name: "Mohamed Tarek",
+    first_name: "Mohamed",
+    last_name: "Tarek",
+    job_title: "Software Engineer"
+  },
+];
+

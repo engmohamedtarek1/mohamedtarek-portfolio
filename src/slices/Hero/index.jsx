@@ -1,13 +1,10 @@
 "use client";
 
-import { ReactNode, useEffect, useRef } from "react";
-import { Content, KeyTextField } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Bounded from "@/components/Bounded";
 import Shapes from "./Shapes";
-import Button from "@/components/Button";
-
+import { HERO } from "@/utils/data";
 /**
  * Props for `Hero`.
  */
@@ -16,6 +13,7 @@ import Button from "@/components/Button";
  * Component for "Hero" Slices.
  */
 const Hero = ({ slice }) => {
+  const data = HERO[0];
   const component = useRef(null);
 
   useEffect(() => {
@@ -86,18 +84,16 @@ const Hero = ({ slice }) => {
         <div className="col-start-1 md:row-start-1">
           <h1
             className="loading-none mb-8 text-[4rem] font-extrabold tracking-tighter md:text-[4.8rem] lg:text-[6rem]"
-            aria-label={
-              slice.primary.first_name + " " + slice.primary.last_name
-            }
+            aria-label={data.first_name + " " + data.last_name}
           >
             <span className="block text-slate-300">
-              {renderLetters(slice.primary.first_name, "first")}
+              {renderLetters(data.first_name, "first")}
             </span>
             <span className="-mt-[.2em] block text-slate-500">
-              {renderLetters(slice.primary.last_name, "last")}
+              {renderLetters(data.last_name, "last")}
             </span>
             <span className="job-title block bg-gradient-to-tr from-green-500 via-green-200 to-green-500 bg-clip-text text-2xl font-bold uppercase tracking-[.2em] text-transparent opacity-0 md:text-4xl">
-              {slice.primary.tag_line}
+              {data.job_title}
             </span>
             <div className="h-4 w-2"></div>
           </h1>
