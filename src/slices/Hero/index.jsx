@@ -13,7 +13,7 @@ import { HERO } from "@/utils/data";
  * Component for "Hero" Slices.
  */
 const Hero = ({ slice }) => {
-  const data = HERO[0];
+  const data = HERO;
   const component = useRef(null);
 
   useEffect(() => {

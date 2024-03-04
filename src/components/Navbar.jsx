@@ -11,7 +11,7 @@ import MyButton from "@/components/MyButton";
 export default function NavBar({ settings }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const data = NAVBAR[0];
+  const data = NAVBAR;
 
   return (
     <nav aria-label="Main navigation">
