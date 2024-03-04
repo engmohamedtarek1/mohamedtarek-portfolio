@@ -18,7 +18,12 @@ export default function NavBar({ settings }) {
     <nav aria-label="Main navigation">
       <ul className="flex flex-col justify-between rounded-b-lg bg-slate-50 px-4 py-2 md:m-4 md:flex-row md:items-center md:rounded-xl">
         <div className="flex items-center justify-between">
-          <NameLogo name={settings.data.name} />
+          <Link
+            href="/"
+            className="text-xl font-extrabold tracking-tighter text-slate-900 hover:text-green-500"
+          >
+            Mohamed Tarek
+          </Link>
           <button
             aria-expanded={open}
             aria-label="Open menu"
@@ -142,10 +147,10 @@ function DesktopMenu({ settings, pathname }) {
       ))}
       <li>
         <Button
-					linkField={settings.data.cta_link}
-					label={settings.data.cta_label}
-					className="ml-3"
-				/>
+          linkField={settings.data.cta_link}
+          label={settings.data.cta_label}
+          className="ml-3"
+        />
       </li>
     </div>
   );

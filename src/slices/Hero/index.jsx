@@ -6,6 +6,7 @@ import { SliceComponentProps } from "@prismicio/react";
 import { gsap } from "gsap";
 import Bounded from "@/components/Bounded";
 import Shapes from "./Shapes";
+import Button from "@/components/Button";
 
 /**
  * Props for `Hero`.
@@ -98,6 +99,12 @@ const Hero = ({ slice }) => {
             <span className="job-title block bg-gradient-to-tr from-green-500 via-green-200 to-green-500 bg-clip-text text-2xl font-bold uppercase tracking-[.2em] text-transparent opacity-0 md:text-4xl">
               {slice.primary.tag_line}
             </span>
+            <div className="h-4 w-2">
+              <Button
+                // linkField="mailto:eng.mohamedtarek0@gmail.com"
+                label="Contact Me"
+              />
+            </div>
           </h1>
         </div>
       </div>
