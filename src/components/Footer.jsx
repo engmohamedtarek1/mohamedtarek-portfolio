@@ -55,20 +55,22 @@ export default async function Footer() {
           </ul>
         </nav>
         <div className="socials inline-flex justify-center sm:justify-end">
-            <Link
-              href={data.github_link}
-              className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-green-400"
-              aria-label={data.name + " on GitHub"}
-            >
-              <FaGithub />
-            </Link>
-            <Link
-              href={data.linkedin_link}
-              className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-green-400"
-              aria-label={data.name + " on LinkedIn"}
-            >
-              <FaLinkedin />
-            </Link>
+          <Link
+            href={data.github_link}
+            className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-green-400"
+            aria-label={data.name + " on GitHub"}
+            target="_blank"
+          >
+            <FaGithub />
+          </Link>
+          <Link
+            href={data.linkedin_link}
+            className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-green-400"
+            aria-label={data.name + " on LinkedIn"}
+            target="_blank"
+          >
+            <FaLinkedin />
+          </Link>
         </div>
       </div>
     </Bounded>

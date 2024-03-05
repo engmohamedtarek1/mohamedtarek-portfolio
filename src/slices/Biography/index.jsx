@@ -22,7 +22,11 @@ const Biography = ({ slice }) => {
         <div className="prose prose-xl prose-slate prose-invert col-start-1">
           <p>{data.description}</p>
         </div>
-        <MyButton href={slice.primary.button_link} label={data.resume_text} />
+        <MyButton
+          href={data.resume_link}
+          label={data.resume_text}
+          target="_blank"
+        />
 
         <Avatar
           image={data.avatar_link}

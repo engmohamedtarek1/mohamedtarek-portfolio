@@ -36,18 +36,17 @@ export const BIOGRAPHY = {
   avatar_link:
     "https://images.prismic.io/mohamedtarek/65e5b10a676dc480aae09141_mohamed2.jpg?auto=format,compress",
   resume_text: "Resume",
+  resume_link: "https://www.linkedin.com/in/eng-mohamedtarek1/",
 };
 
 export const TECHLIST = {
   title: "What I use",
   items: [
-    { tech_name: 'React', tech_color: '#61DAFB' },
-    { tech_name: 'Next.js', tech_color: '#FFFFFF' },
-    { tech_name: 'Tailwind', tech_color: '#36B7F0' },
-    { tech_name: 'GSAP', tech_color: '#07E346' }
-  ]
+    { tech_name: "React", tech_color: "#61DAFB" },
+    { tech_name: "Next.js", tech_color: "#FFFFFF" },
+    { tech_name: "Tailwind", tech_color: "#36B7F0" },
+    { tech_name: "GSAP", tech_color: "#07E346" },
+  ],
 };
 
-export const EXPERIENCE = {
-  
-}
+export const EXPERIENCE = {};
