@@ -12,7 +12,7 @@ import { HERO } from "@/utils/data";
 /**
  * Component for "Hero" Slices.
  */
-const Hero = ({ slice }) => {
+const Hero = () => {
   const data = HERO;
   const component = useRef(null);
 
@@ -75,8 +75,6 @@ const Hero = ({ slice }) => {
 
   return (
     <Bounded
-      data-slice-type={slice.slice_type}
-      data-slice-variation={slice.variation}
       ref={component}
     >
       <div className="grid min-h-[70vh] grid-cols-1 items-center md:grid-cols-2">
