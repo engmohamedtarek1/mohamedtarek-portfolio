@@ -1,14 +1,14 @@
 import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";
-import { EXPERIENCE } from "@/utils/data";
+import { EDUCATION } from "@/utils/data";
 /**
- * Props for `Experience`.
+ * Props for `Education`.
  */
 /**
- * Component for "Experience" Slices.
+ * Component for "Education" Slices.
  */
-const Experience = () => {
-  const data = EXPERIENCE;
+const Education = () => {
+	const data = EDUCATION;
 
   return (
     <Bounded>
@@ -27,7 +27,7 @@ const Experience = () => {
             <span>{item.company}</span>
           </div>
           <div className="prose prose-lg prose-invert mt-4">
-            <p>{item.description}</p>
+						<p>{item.description}</p>
           </div>
         </div>
       ))}
@@ -35,4 +35,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Education;

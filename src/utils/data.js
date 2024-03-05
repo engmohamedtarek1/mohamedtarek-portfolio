@@ -49,4 +49,50 @@ export const TECHLIST = {
   ],
 };
 
-export const EXPERIENCE = {};
+export const EXPERIENCE = {
+  title: "Experience",
+  items: [
+    {
+      title: "Engineer",
+      date: "2020-Present",
+      company: "Prismic",
+      description: "I make things pretty",
+    },
+    {
+      title: "Engineer",
+      date: "2020-Present",
+      company: "Prismic",
+      description: "I make things pretty",
+    },
+    {
+      title: "Engineer",
+      date: "2020-Present",
+      company: "Prismic",
+      description: "I make things pretty",
+    },
+  ],
+};
+
+export const EDUCATION = {
+  title: "Education",
+  items: [
+    {
+      title: "Engineer",
+      date: "2020-Present",
+      company: "Prismic",
+      description: "I make things pretty",
+    },
+    {
+      title: "Engineer",
+      date: "2020-Present",
+      company: "Prismic",
+      description: "I make things pretty",
+    },
+    {
+      title: "Engineer",
+      date: "2020-Present",
+      company: "Prismic",
+      description: "I make things pretty",
+    },
+  ],
+};

@@ -31,6 +31,6 @@
 		"src/app/layout.jsx",
 		"src/app/slice-simulator/page.jsx",
 		"src/slices/Biography/index.jsx"
-, "src/slices/TechList/index.jsx", "src/slices/ContentIndex/index.jsx", "src/slices/TextBlock/index.jsx", "src/slices/Experience/index.jsx"	],
+, "src/slices/TechList/index.jsx", "src/slices/ContentIndex/index.jsx", "src/slices/TextBlock/index.jsx", "src/slices/Experience/index.jsx", "src/slices/Education/index.jsx"	],
 	"exclude": ["node_modules"]
 }

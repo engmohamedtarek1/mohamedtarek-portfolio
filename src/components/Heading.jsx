@@ -6,7 +6,7 @@ export default function Heading({
 	children,
 	size = 'lg',
 }) {
-	size = 'lg';
+	size = size;
 
 	return (
 		<Comp
