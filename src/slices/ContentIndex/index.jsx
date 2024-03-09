@@ -1,9 +1,7 @@
-import { isFilled } from "@prismicio/client";
-import { PrismicRichText } from "@prismicio/react";
-import { createClient } from "@/prismicio";
 import ContentList from "./ContentList";
 import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";
+import { PROJECTS } from "@/utils/data";
 /**
  * Props for `BlogPostIndex`.
  */
@@ -11,30 +9,20 @@ import Heading from "@/components/Heading";
 /**
  * Component for "BlogPostIndex" Slices.
  */
-const BlogPostIndex = async ({ slice }) => {
-  const client = createClient();
-  const projects = await client.getAllByType("project");
-
-  const items = projects;
+const BlogPostIndex = async () => {
+  const data = PROJECTS;
 
   return (
-    <Bounded
-      data-slice-type={slice.slice_type}
-      data-slice-variation={slice.variation}
-    >
+    <Bounded>
       <Heading size="xl" className="mb-8">
-        {slice.primary.heading}
+        {data.title}
       </Heading>
-      {isFilled.richText(slice.primary.description) && (
-        <div className="prose prose-xl prose-invert mb-10">
-          <PrismicRichText field={slice.primary.description} />
-        </div>
-      )}
+      <div className="prose prose-xl prose-invert mb-10">
+        {data.description}
+      </div>
       <ContentList
-        items={items}
-        contentType={slice.primary.content_type}
-        viewMoreText={slice.primary.view_more_text}
-        fallbackItemImage={slice.primary.fallback_item_image}
+        items={data.items}
+        viewMoreText={data.view_more_text}
       />
     </Bounded>
   );

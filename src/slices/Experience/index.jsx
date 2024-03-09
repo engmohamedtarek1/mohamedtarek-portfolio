@@ -23,7 +23,7 @@ const Experience = () => {
 
           <div className="mt-1 flex w-fit items-center gap-1 text-2xl font-semibold tracking-tight text-slate-400">
             <span>{item.date}</span>{" "}
-            <span className="text-3xl font-extralight">/</span>{" "}
+            <span className="mx-2 text-3xl font-extralight">/</span>{" "}
             <span>{item.company}</span>
           </div>
           <div className="prose prose-lg prose-invert mt-4">

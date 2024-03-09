@@ -16,7 +16,7 @@ const Biography = ({ slice }) => {
   return (
     <Bounded>
       <div className="md:grid-cols-[2fr, 1fr] grid gap-x-8 gap-y-6">
-        <Heading as="h1" size="x1" className="col-start-1">
+        <Heading as="h1" size="xl" className="col-start-1">
           {data.full_name}
         </Heading>
         <div className="prose prose-xl prose-slate prose-invert col-start-1">

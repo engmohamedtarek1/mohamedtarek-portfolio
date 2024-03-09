@@ -1,20 +1,18 @@
 "use client";
 
 import React, { useRef, useState, useEffect } from "react";
-import { asImageSrc, isFilled } from "@prismicio/client";
+import { asImageSrc } from "@prismicio/client";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MdArrowOutward } from "react-icons/md";
 import "./ContentList.css";
+import { FaGithub } from "react-icons/fa";
+import Link from "next/link";
+import MyButton from "@/components/MyButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function ContentList({
-  items,
-  contentType,
-  fallbackItemImage,
-  viewMoreText = "Read More",
-}) {
+export default function ContentList({ items }) {
   const component = useRef(null);
   const itemsRef = useRef([]);
 
@@ -23,12 +21,16 @@ export default function ContentList({
   const [hovering, setHovering] = useState(false);
   const lastMousePos = useRef({ x: 0, y: 0 });
 
-  const urlPrefix = contentType === "Blogs" ? "/blog" : "/projects";
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   useEffect(() => {
     // Animate list-items in with a stagger
     let ctx = gsap.context(() => {
-      itemsRef.current.forEach((item, index) => {
+      itemsRef.current.forEach((item) => {
         gsap.fromTo(
           item,
           {
@@ -105,9 +107,8 @@ export default function ContentList({
   };
 
   const contentImages = items.map((item) => {
-    const image = isFilled.image(item.data.image)
-      ? item.data.image
-      : fallbackItemImage;
+    const image = item.image;
+
     return asImageSrc(image, {
       fit: "crop",
       w: 220,
@@ -140,12 +141,11 @@ export default function ContentList({
             className="list-item opacity-0"
           >
             <a
-              href={`${urlPrefix}/${post.uid}`}
+              href={`projects/${post.uid}`}
               className="flex flex-col justify-between border-t border-t-slate-100 py-10  text-slate-200 md:flex-row "
-              aria-label={post.data.title || ""}
             >
               <div className="flex flex-col">
-                <span className="text-3xl font-bold">{post.data.title}</span>
+                <span className="text-3xl font-bold">{post.title}</span>
                 <div className="flex gap-3 text-green-400">
                   {post.tags.map((tag, index) => (
                     <span key={index} className="text-lg font-bold">
@@ -154,9 +154,27 @@ export default function ContentList({
                   ))}
                 </div>
               </div>
-              <span className="ml-auto flex items-center gap-2 text-xl font-medium md:ml-0">
-                {viewMoreText} <MdArrowOutward />
-              </span>
+              {isClient ? (
+                <div className="gap- ml-auto flex items-center text-xl font-medium md:ml-0">
+                  <span className="ml-auto flex items-center gap-2 text-xl font-medium md:ml-0">
+                    <MyButton
+                      href={post.github_link}
+                      label={<FaGithub className="text-[28px]" />}
+                      showIcon={false}
+                      target="_blank"
+                    />
+                  </span>
+                  <span className="ml-auto flex items-center gap-1 rounded p-3 text-xl font-medium md:ml-0">
+                    <MyButton
+                      href={post.live_demo}
+                      label="Live Demo"
+                      target="_blank"
+                    />
+                  </span>
+                </div>
+              ) : (
+                ""
+              )}
             </a>
           </li>
         ))}
