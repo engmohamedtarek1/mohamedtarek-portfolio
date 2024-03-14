@@ -71,7 +71,7 @@ const TechList = () => {
           {Array.from({ length: 15 }, (_, index) => (
             <React.Fragment key={index}>
               <span
-                className="text-item text-7xl font-extrabold uppercase tracking-tighter"
+                className="text-item text-8xl font-extrabold uppercase tracking-tighter"
                 style={{
                   color: index === 7 && tech_color ? tech_color : "inherit",
                 }}

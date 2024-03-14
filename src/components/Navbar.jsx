@@ -14,7 +14,10 @@ export default function NavBar({ settings }) {
   const data = NAVBAR;
 
   return (
-    <nav aria-label="Main navigation">
+    <nav
+      aria-label="Main navigation"
+      className="top-0 z-50 mx-auto max-w-7xl md:sticky md:top-4"
+    >
       <ul className="flex flex-col justify-between rounded-b-lg bg-slate-50 px-4 py-2 md:m-4 md:flex-row md:items-center md:rounded-xl">
         <div className="flex items-center justify-between">
           <Link
