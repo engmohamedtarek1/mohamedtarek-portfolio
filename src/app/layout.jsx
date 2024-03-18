@@ -21,12 +21,12 @@ export async function generateMetadata() {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="bg-emerald-950 text-slate-100">
-      <div className="pointer-events-none absolute inset-0 -z-40 h-full bg-[url('/noisetexture.jpg')] opacity-20 mix-blend-soft-light"></div>
-      <div className="background-gradient absolute inset-0 -z-50 max-h-screen" />
       <body className={clsx(urbanist.className, "relative min-h-screen")}>
         <Navbar />
         {children}
         <Footer />
+        <div className="pointer-events-none absolute inset-0 -z-40 h-full bg-[url('/noisetexture.jpg')] opacity-20 mix-blend-soft-light"></div>
+        <div className="background-gradient absolute inset-0 -z-50 max-h-screen" />
         <PrismicPreview repositoryName={repositoryName} />
       </body>
     </html>
