@@ -10,7 +10,7 @@ import MyButton from "@/components/MyButton";
 /**
  * Component for "Biography" Slices.
  */
-const Biography = ({ slice }) => {
+const Biography = () => {
   const data = BIOGRAPHY;
 
   return (
