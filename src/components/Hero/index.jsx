@@ -74,9 +74,7 @@ const Hero = () => {
   };
 
   return (
-    <Bounded
-      ref={component}
-    >
+    <Bounded ref={component} className="md:py-5 lg:py-5">
       <div className="grid min-h-[70vh] grid-cols-1 items-center md:grid-cols-2">
         <Shapes />
         <div className="col-start-1 md:row-start-1">

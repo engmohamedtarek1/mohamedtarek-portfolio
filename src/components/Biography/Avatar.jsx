@@ -1,6 +1,5 @@
 "use client";
 
-import { PrismicNextImage } from "@prismicio/next";
 import clsx from "clsx";
 import gsap from "gsap";
 import Image from "next/image";

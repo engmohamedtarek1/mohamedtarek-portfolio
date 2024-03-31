@@ -3,13 +3,13 @@ import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";
 import { PROJECTS } from "@/utils/data";
 /**
- * Props for `BlogPostIndex`.
+ * Props for `ProjectContent`.
  */
 
 /**
- * Component for "BlogPostIndex" Slices.
+ * Component for "ProjectContent" Slices.
  */
-const BlogPostIndex = async () => {
+const ProjectContent = async () => {
   const data = PROJECTS;
 
   return (
@@ -28,4 +28,4 @@ const BlogPostIndex = async () => {
   );
 };
 
-export default BlogPostIndex;
+export default ProjectContent;

@@ -28,7 +28,7 @@ const TechList = () => {
     let ctx = gsap.context(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
-          markers: true,
+          markers: false,
           start: "top bottom",
           end: "bottom top",
           scrub: 4,

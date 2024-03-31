@@ -4,10 +4,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { asImageSrc } from "@prismicio/client";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { MdArrowOutward } from "react-icons/md";
-import "./ContentList.css";
 import { FaGithub } from "react-icons/fa";
-import Link from "next/link";
 import MyButton from "@/components/MyButton";
 
 gsap.registerPlugin(ScrollTrigger);

@@ -1,36 +1,41 @@
 {
-	"compilerOptions": {
-		"lib": ["dom", "dom.iterable", "esnext"],
-		"allowJs": true,
-		"skipLibCheck": true,
-		"strict": true,
-		"noEmit": true,
-		"esModuleInterop": true,
-		"module": "esnext",
-		"moduleResolution": "bundler",
-		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"jsx": "preserve",
-		"incremental": true,
-		"plugins": [
-			{
-				"name": "next"
-			}
-		],
-		"paths": {
-			"@/*": ["./src/*"]
-		}
-	},
-	"include": [
-		"next-env.d.ts",
-		"**/*.ts",
-		"**/*.tsx",
-		".next/types/**/*.ts",
-		"src/slices/Hero/index.jsx",
-		"src/app/page.jsx",
-		"src/app/layout.jsx",
-		"src/app/slice-simulator/page.jsx",
-		"src/slices/Biography/index.jsx"
-, "src/slices/TechList/index.jsx", "src/slices/ContentIndex/index.jsx", "src/slices/TextBlock/index.jsx", "src/slices/Experience/index.jsx", "src/slices/Education/index.jsx"	],
-	"exclude": ["node_modules"]
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/components/Hero/index.jsx",
+    "src/app/page.jsx",
+    "src/app/layout.jsx",
+    "src/app/slice-simulator/page.jsx",
+    "src/components/Biography/index.jsx",
+    "src/components/TechList/index.jsx",
+    "src/components/ProjectContent/index.jsx",
+    "src/components/TextBlock/index.jsx",
+    "src/components/Experience/index.jsx",
+    "src/components/Education/index.jsx"
+  ],
+  "exclude": ["node_modules"]
 }
